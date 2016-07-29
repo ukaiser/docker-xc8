@@ -18,7 +18,7 @@ RUN curl -fSL -A "Mozilla/4.0" -o /tmp/xc8.run "http://www.microchip.com/mplabxc
     && /tmp/xc8.run --mode unattended --unattendedmodeui none \
         --netservername localhost --LicenseType FreeMode --prefix /opt/microchip/xc8 \
     && rm /tmp/xc8.run
-#ENV PATH /opt/microchip/xc8/bin:$PATH
+ENV PATH /opt/microchip/xc8/bin:$PATH
 
 ## Download and Install XC16 Compiler, Current Version
 #RUN curl -fSL -A "Mozilla/4.0" -o /tmp/xc16.run "http://www.microchip.com/mplabxc16linux" \
